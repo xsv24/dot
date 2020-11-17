@@ -8,7 +8,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$(yarn global bin):$PATH" 
 
 # Aliases
-alias = "sudo " # Allows aliases to work with sudo.
+alias sudo="sudo " # Allows aliases to work with sudo.
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
