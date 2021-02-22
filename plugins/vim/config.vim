@@ -48,6 +48,7 @@ set showmatch
 set colorcolumn=80
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 
+set mouse=n
 " TextEdit might fail if hidden is not set.
 set hidden
 

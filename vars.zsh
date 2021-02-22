@@ -2,10 +2,15 @@
 export OPENSC_LIBS=$(brew --prefix opensc)/lib
 export ZSH="$HOME/.oh-my-zsh"
 export REPOS="$HOME/Documents/repos"
+export ANDROID_HOME=~/Library/Android/sdk
 
 # PATH
+export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$(yarn global bin):$PATH" 
+# This loads nvm node version manager.
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Aliases
 alias sudo="sudo " # Allows aliases to work with sudo.

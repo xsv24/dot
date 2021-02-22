@@ -14,9 +14,6 @@ source $HOME/zsh/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 # Starship https://starship.rs
 eval "$(starship init zsh)"
 
-# Enviroment manager
-. $(brew --prefix asdf)/asdf.sh
-
 # Increase file limit open
 ulimit -S -n 30000 
 
