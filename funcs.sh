@@ -45,8 +45,14 @@ fif() {
 
 
 git-diff() {
+  # Add all files incase untracked.
+  git add -N .
   local preview="git diff $@ --color=always -- {-1}"
   local to_stage=$(git diff $@ --name-only | fzf -m --ansi --preview $preview)
   echo "$to_stage"
 }
 
+git-add() {
+  local files="$(git-diff $@)"
+  echo "$files" | xargs -I{} git add {} && git status --short && return
+}
