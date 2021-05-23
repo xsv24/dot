@@ -17,3 +17,6 @@ eval "$(starship init zsh)"
 # Increase file limit open
 ulimit -S -n 30000 
 
+# Set the zsh into vim mode.
+bindkey -v
+
