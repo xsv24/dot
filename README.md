@@ -8,7 +8,7 @@ brew install neovim
 ```
 
 ```
-cd ~/.config/ && git clone https://github.com/xsv24/nvim.git
+cd ~/.config/ && git clone https://github.com/xsv24/dot.git
 ```
 
 ## [Vim-Plug](https://github.com/junegunn/vim-plug)
