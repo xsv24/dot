@@ -13,4 +13,4 @@
 #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
 #ZSH_THEME="agnoster"
 
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"

@@ -73,3 +73,5 @@ nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>gp <Plug>(coc-diagnostic-prev)
 nmap <leader>gn <Plug>(coc-diagnostic-next)
+" Navigate back
+noremap <leader>gb <C-o>

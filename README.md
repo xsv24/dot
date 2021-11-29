@@ -29,3 +29,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim app.js
 ```
 
+```
+cd ~/.dot/ && git clone https://github.com/xsv24/nvim.git
+```
+

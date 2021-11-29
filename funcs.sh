@@ -1,32 +1,34 @@
-reload() {
-    source ~/.zshrc
+#!/bin/bash
+
+function reload {
+  source ~/.bashrc
 }
 
-function newdb() {
-    local name=$1;
-    local user="$name-user";
-    local password="$name-password";
-    createdb $name;
-    psql -c "create user \"$user\" with encrypted password '$password'";
-    psql -c "grant all privileges on database \"$name\" to \"$user\"";
+function newdb {
+  local name=$1;
+  local user="$name-user";
+  local password="$name-password";
+  createdb $name;
+  psql -c "create user \"$user\" with encrypted password '$password'";
+  psql -c "grant all privileges on database \"$name\" to \"$user\"";
 }
 
-function portfwd() {
-    local name=$1;
-    local localPort=$2;
-    local remotePort=$3;
-    local namespace=${4:-default};
-    echo "Start forwarding $localPort -> $name ($namespace) $remotePort";
-    while true
-    do
-        local pod=$(kubectl get pods -n $namespace | rg $name | head -1 | awk '{print $1}');
-        kubectl port-forward -n $namespace $pod $localPort:$remotePort;
-    done
+function portfwd {
+  local name=$1;
+  local localPort=$2;
+  local remotePort=$3;
+  local namespace=${4:-default};
+  echo "Start forwarding $localPort -> $name ($namespace) $remotePort";
+  while true
+  do
+      local pod=$(kubectl get pods -n $namespace | rg $name | head -1 | awk '{print $1}');
+      kubectl port-forward -n $namespace $pod $localPort:$remotePort;
+  done
 }
 
 # Select a running docker container & run an action against it.
 # > doc stop 
-function doc() {
+function doc {
   local action=$1;
   local cid=$(docker ps | sed 1d | fzf -q "$1" | awk '{print $1}')
 
@@ -35,7 +37,7 @@ function doc() {
 
 # find-in-file 
 # > fif <SEARCH_TERM>
-fif() {
+function fif {
   if [ ! "$#" -gt 0 ]; then
     echo "Need a string to search for!";
     return 1;
@@ -44,15 +46,16 @@ fif() {
 }
 
 
-git-diff() {
+function git_diff {
   # Add all files incase untracked.
   git add -N .
   local preview="git diff $@ --color=always -- {-1}"
-  local to_stage=$(git diff $@ --name-only | fzf -m --ansi --preview $preview)
+  local to_stage=$(git diff $@ --name-only | fzf -m --ansi --preview "$preview")
   echo "$to_stage"
 }
 
-git-add() {
-  local files="$(git-diff $@)"
+function git_add {
+  local files="$(git_diff $@)"
   echo "$files" | xargs -I{} git add {} && git status --short && return
 }
+

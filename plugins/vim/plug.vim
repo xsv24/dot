@@ -14,4 +14,5 @@
     Plug 'kamykn/popup-menu.nvim'
     Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'ryanoasis/vim-devicons'
+    Plug 'OmniSharp/omnisharp-vim'
 call plug#end()

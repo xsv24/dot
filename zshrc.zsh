@@ -5,8 +5,9 @@ source $HOME/truelayer.zsh
 
 # Plugins 
 source $HOME/.dot/plugins/fzf.zsh 
+source $HOME/.dot/plugins/kubectl.sh
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/zsh/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 
@@ -18,5 +19,5 @@ eval "$(starship init zsh)"
 ulimit -S -n 30000 
 
 # Set the zsh into vim mode.
-bindkey -v
+# bindkey -v
 
