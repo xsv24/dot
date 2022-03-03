@@ -8,8 +8,9 @@ source $HOME/.dot/plugins/fzf.zsh
 source $HOME/.dot/plugins/kubectl.sh
 
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/zsh/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 
 # Scripts
 # Starship https://starship.rs
