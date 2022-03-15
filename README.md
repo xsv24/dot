@@ -1,3 +1,8 @@
+### Clone 
+```
+cd ~/.dot/ && git clone https://github.com/xsv24/nvim.git
+```
+
 ## Install
 
 ### Home brew
@@ -36,6 +41,11 @@ brew install starship
 brew install jq
 ```
 
+### Rip greg
+```bash
+brew install ripgrep
+```
+
 ### Install node js & yarn
 
 ```bash
@@ -51,7 +61,7 @@ brew install awscli
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```\
+```
 
 ## [NeoVim](https://neovim.io/)
 ## Alias = vi
@@ -60,8 +70,9 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew install neovim
 ```
 
+Link the neovim config
 ```
-cd ~/.config/ && git clone https://github.com/xsv24/dot.git
+cd ~/.config && mkdir nvim && cd nvim && echo "source $HOME/.dot/plugins/vim/init.vim" >> init.vim
 ```
 
 ## [Vim-Plug](https://github.com/junegunn/vim-plug)
@@ -74,15 +85,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ```bash
 :PlugInstall
-```
-
-## Run  
-
-```
-nvim app.js
-```
-
-```
-cd ~/.dot/ && git clone https://github.com/xsv24/nvim.git
 ```
 

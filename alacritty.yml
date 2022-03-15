@@ -15,15 +15,15 @@ window:
 
 font:
   normal:
-    family: Fira Code
+    family: FuraCode Nerd Font
     style: Retina
 
   bold:
-    family: Fira Code
+    family: FuraCode Nerd Font
     style: Bold
 
   italic:
-    family: Fira Code 
+    family: FuraCode Nerd Font
     style: Light
 
   size: 13.0
