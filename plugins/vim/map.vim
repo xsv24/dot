@@ -75,3 +75,9 @@ nmap <leader>gp <Plug>(coc-diagnostic-prev)
 nmap <leader>gn <Plug>(coc-diagnostic-next)
 " Navigate back
 noremap <leader>gb <C-o>
+
+"Nerd Tree
+nnoremap <leader>t :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

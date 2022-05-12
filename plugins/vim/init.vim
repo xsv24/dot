@@ -3,11 +3,6 @@ source $HOME/.dot/plugins/vim/config.vim
 source $HOME/.dot/plugins/vim/map.vim
 source $HOME/.dot/plugins/vim/fzf.vim
 
-let g:netrw_browse_split = 2
-let g:vrfr_rg = 'true'
-let g:netrw_banner = 1
-let g:netrw_winsize = 15
-
 if executable('rg')
     let g:rg_derive_root='true'
 endif
