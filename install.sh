@@ -5,7 +5,7 @@
 brew install fzf && $(brew --prefix)/opt/fzf/install
 
 # fzf tab auto-completion
-brew install gawk && git clone git clone https://github.com/lincheney/fzf-tab-completion
+brew install gawk && git clone https://github.com/lincheney/fzf-tab-completion
 
 # zsh terminal syntax highlighting
 brew install zsh-syntax-highlighting
@@ -19,12 +19,21 @@ brew install jq
 # rg search
 brew install ripgrep
 
+# http pie
+brew install httpie
+
 # NodeJS
 brew install node && npm install --global yarn
+
+# GoLang
+brew install go
 
 # AWS cli
 brew install awscli
 # You will need to configure this `aws configure`.
+
+# Kubectl
+brew install kubectl
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
