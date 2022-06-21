@@ -1,6 +1,18 @@
 # Install homebew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# install neovim
+brew install neovim
+
+# Install git
+brew install git
+
+# Set git editor to neovim.
+git config --global core.editor "vi" 
+
+# Copy alacritty config
+mkdir -p $HOME/.config && cp ./alacritty.yml $HOME/.config/alacritty.yml
+
 # fzf fuzy finder
 brew install fzf && $(brew --prefix)/opt/fzf/install
 
