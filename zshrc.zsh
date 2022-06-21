@@ -1,7 +1,6 @@
 # Libs
 source $HOME/.dot/vars.zsh
 source $HOME/.dot/funcs.sh
-source $HOME/truelayer.zsh
 
 # Plugins 
 source $HOME/.dot/plugins/fzf.zsh 

@@ -2,17 +2,12 @@
 ```
 git clone https://github.com/xsv24/dot.git ~/.dot && ~/.dot/install.sh
 ```
-
 ## Set up
-
+- Install [Alacritty](https://github.com/alacritty/alacritty/releases)
+- Download [FiraCode](https://www.nerdfonts.com/font-downloads) look for FuraCode install on pc.
 
 ### Install neovim packages
 > Start neovim & run :PlugInstall as a vim command.
-
-### Set commit editor to neovim
-```bash
-git config --global core.editor "vi" 
-```
 
 ### dotnet coc support
 ```bash
@@ -33,8 +28,11 @@ dotnet tool install --global csharp-ls
 }
 ```
 
-## Aliases 
+## Aliases / Bindings
 
+- vi -> neovim
+- git_add -> fzf git staging
+- ctrl + r -> fzf command history
 - TODO
 
 ## Tools 
