@@ -9,6 +9,24 @@ git clone https://github.com/xsv24/dot.git ~/.dot && ~/.dot/install.sh
 ### Install neovim packages
 > Start neovim & run :PlugInstall as a vim command.
 
+### dotnet coc support
+```bash
+dotnet tool install --global csharp-ls
+```
+```
+:CocConfig
+```
+```json
+{
+    "languageserver": {
+        "csharp-ls": {
+          "command": "csharp-ls",
+          "filetypes": ["cs"],
+          "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+        }
+    }
+}
+```
 
 ## Aliases / Bindings
 

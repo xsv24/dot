@@ -2,20 +2,33 @@ syntax on
 syntax enable
 filetype plugin indent on
 
-if has('nvim') || has('termguicolors')
-  set termguicolors
-endif
+"if has('nvim') || has('termguicolors')
+set termguicolors
+"endif
 
 " Theme
 set background=dark
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'palenight'
-let g:lightline = { 'colorscheme': 'material_vim' }
-colorscheme material
+"let g:material_terminal_italics = 1
+"let g:material_theme_style = 'palenight'
+let g:lightline = { 'colorscheme': 'challenger_deep' }
+colorscheme challenger_deep
 
 "Font
 "set guifont='FiraCode Nerd Font'
 set encoding=UTF-8
+
+"File explorer
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
+
+let g:vrfr_rg = 'true'
+
+"Coc config
+"let g:coc_global_extensions=[ 'coc-omnisharp' ]
+
 
 set splitbelow
 set splitright
@@ -28,7 +41,7 @@ set shiftwidth=4
 set softtabstop=4
 set nowrap
 set nu
-set relativenumber
+"set relativenumber
 set noswapfile
 set undodir=~/.vim/undodir
 set undofile
@@ -45,7 +58,7 @@ set smartcase
 set smartindent
 set autoindent
 set showmatch
-set colorcolumn=80
+"set colorcolumn=80
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 
 set mouse=n

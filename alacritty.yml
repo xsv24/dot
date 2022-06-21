@@ -38,13 +38,20 @@ font:
 
   use_thin_strokes: true
 
+env:
+  TERM: xterm-256color
+
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
+# challenger deep
 colors:
+  # Default colors
   primary:
     background: '0x1b182c'
     foreground: '0xcbe3e7'
+
+  # Normal colors
   normal:
     black:   '0x100e23'
     red:     '0xff8080'
@@ -54,6 +61,8 @@ colors:
     magenta: '0xc991e1'
     cyan:    '0xaaffe4'
     white:   '0xcbe3e7'
+
+  # Bright colors
   bright:
     black:   '0x565575'
     red:     '0xff5458'

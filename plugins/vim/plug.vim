@@ -15,4 +15,5 @@
     Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'ryanoasis/vim-devicons'
     Plug 'OmniSharp/omnisharp-vim'
+    Plug 'preservim/nerdtree'
 call plug#end()

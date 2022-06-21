@@ -75,3 +75,17 @@ nmap <leader>gp <Plug>(coc-diagnostic-prev)
 nmap <leader>gn <Plug>(coc-diagnostic-next)
 " Navigate back
 noremap <leader>gb <C-o>
+
+" C# mappings
+autocmd FileType cs nmap <leader>gd <Plug>(omnisharp_go_to_definition)
+autocmd FileType cs nmap <leader>gu <Plug>(omnisharp_find_usages)
+autocmd FileType cs nmap <leader>gi <Plug>(omnisharp_find_implementations)
+autocmd FileType cs nmap <leader>gx <Plug>(omnisharp_documentation)
+autocmd FileType cs nmap <leader>gh <Plug>(omnisharp_signature_help)
+autocmd FileType cs nmap <leader>r <Plug>(omnisharp_rename)
+
+"Nerd Tree
+nnoremap <leader>t :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
