@@ -10,6 +10,8 @@ brew install git
 # Set git editor to neovim.
 git config --global core.editor "vi" 
 
+# install alacritty
+brew install --cask alacritty
 # Copy alacritty config
 mkdir -p $HOME/.config && cp ./alacritty.yml $HOME/.config/alacritty.yml
 
@@ -34,6 +36,9 @@ brew install ripgrep
 # http pie
 brew install httpie
 
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # NodeJS
 brew install node && npm install --global yarn
 
@@ -46,6 +51,8 @@ brew install awscli
 
 # Kubectl
 brew install kubectl
+# k8ns context manager
+brew install kubectx
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -60,3 +67,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 # You will need to run `:PlugInstall` when in neovim.
 
+# Inject a source to the .dot .zshrc file
+echo 'source $HOME/.dot/zshrc.zsh' >> $HOME/.zshrc
