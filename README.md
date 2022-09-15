@@ -3,7 +3,7 @@ Configuration files and terminal utils for my setup.
 
 ## 🥼 Prerequisites    
 - Install [Alacritty](https://github.com/alacritty/alacritty/releases)
-- Download [FiraCode](https://www.nerdfonts.com/font-downloads) with at least the below variations.
+- Download [FiraCode & JetBrains Mono](https://www.nerdfonts.com/font-downloads) with at least the below variations.
   - Retina
   - Bold
   - Light
