@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function reload {
-  source ~/.bashrc
+  source ~/.zshrc
 }
 
 function newdb {

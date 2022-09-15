@@ -1,0 +1,11 @@
+[
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+    },
+    { 
+        "key": "escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus && activeViewlet != 'workbench.view.explorer'"
+    }
+]

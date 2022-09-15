@@ -1,0 +1,59 @@
+{
+    "workbench.colorTheme": "Material Theme Palenight",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": " 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [ "leader", "s" ],
+            "commands": [ "workbench.view.search" ],
+            "silent": true 
+        },
+        {
+            "before": [ "leader", "d" ],
+            "commands": [ "git.openChange" ],
+            "silent": true 
+        },
+        {
+            "before": [ "leader", "r" ],
+            "commands": [ "editor.action.rename" ],
+            "silent": true
+        },
+        {
+            "before": [ "leader", "t" ],
+            "commands": [ "git-graph.view" ],
+            "silent": true
+        },
+        {
+            "before": [ "leader", "g", "d" ],
+            "commands": [ "editor.action.revealDefinition" ],
+            "silent": true
+        },
+        {
+            "before": [ "leader", "g", "b" ],
+            "commands": [ "workbench.action.navigateBack" ],
+            "silent": true
+        },
+        {
+            "before": [ "leader", "g", "p" ],
+            "commands": [ "editor.action.peekDefinition" ],
+            "silent": true
+        },
+        {
+            "before": [ "leader", "g", "i" ],
+            "commands": [ "editor.action.goToImplementation" ],
+            "silent": true
+        },
+        {
+            "before": ["leader", "g", "r"],
+            "commands": [ "editor.action.goToReferences" ],
+            "silent": true
+        },
+        {
+            "before": ["leader", "g", "t"],
+            "commands": [ "editor.action.goToTypeDefinition" ],
+            "silent": true
+        }
+    ]
+}
