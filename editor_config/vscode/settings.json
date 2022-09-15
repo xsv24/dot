@@ -6,6 +6,16 @@
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
+            "before": [ "leader", "s" ],
+            "commands": [ "workbench.view.search" ],
+            "silent": true 
+        },
+        {
+            "before": [ "leader", "d" ],
+            "commands": [ "git.openChange" ],
+            "silent": true 
+        },
+        {
             "before": [ "leader", "r" ],
             "commands": [ "editor.action.rename" ],
             "silent": true
@@ -18,6 +28,11 @@
         {
             "before": [ "leader", "g", "d" ],
             "commands": [ "editor.action.revealDefinition" ],
+            "silent": true
+        },
+        {
+            "before": [ "leader", "g", "b" ],
+            "commands": [ "workbench.action.navigateBack" ],
             "silent": true
         },
         {
