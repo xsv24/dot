@@ -10,6 +10,10 @@ brew install git
 # Set git editor to neovim.
 git config --global core.editor "vi" 
 
+# Install github cli
+brew install gh
+gh config set editor "vi"
+
 # install alacritty
 brew install --cask alacritty
 # Copy alacritty config
