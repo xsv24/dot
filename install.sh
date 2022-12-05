@@ -1,8 +1,13 @@
+#!/bin/bash
+
 # Install homebew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install neovim
 brew install neovim
+
+# install bat
+brew install bat
 
 # Install git
 brew install git
@@ -14,13 +19,16 @@ git config --global core.editor "vi"
 brew install gh
 gh config set editor "vi"
 
+# Make sure .config is there
+mkdir -p "$HOME/.config"
+
 # install alacritty
 brew install --cask alacritty
 # Copy alacritty config
-mkdir -p $HOME/.config && cp ./alacritty.yml $HOME/.config/alacritty.yml
+mkdir -p "$HOME/.config/alacritty" && cp ./alacritty.yml "$HOME/.config/alacritty/alacritty.yml"
 
 # fzf fuzy finder
-brew install fzf && $(brew --prefix)/opt/fzf/install
+brew install fzf && "$(brew --prefix)"/opt/fzf/install
 
 # fzf tab auto-completion
 brew install gawk && git clone https://github.com/lincheney/fzf-tab-completion
@@ -72,4 +80,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # You will need to run `:PlugInstall` when in neovim.
 
 # Inject a source to the .dot .zshrc file
-echo 'source $HOME/.dot/zshrc.zsh' >> $HOME/.zshrc
+echo "source $HOME/.dot/zshrc.zsh" >> "$HOME/.zshrc"

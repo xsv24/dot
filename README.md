@@ -18,6 +18,12 @@ Setting up Neovim requires running the following vim commands by opening `vim`.
 ```vim
 :PlugInstall
 ```
+
+### [Rust](https://github.com/fannheyward/coc-rust-analyzer)
+```bash
+:CocInstall coc-rust-analyzer
+```
+
 ### ![Typescript](https://img.shields.io/badge/Typescript_server-000000?style=flat-square&logo=typescript&logoColor=#3178C6) 
 
 ```bash
@@ -65,7 +71,9 @@ dotnet tool install --global csharp-ls
 - [Starship](https://starship.rs/) - Theme / Cross shell prompt 
 - [Oh my zsh](https://github.com/ohmyzsh/ohmyzsh) - Terminal plugins
 - [httpie](https://httpie.io/cli) - http cli
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - rust written search similar to grep
 - [jq](https://stedolan.github.io/jq/tutorial/) - json cli
+- [bat](https://github.com/sharkdp/bat) - "A cat clone with wings"
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/) - kubernetes cli
 - [kubectx](https://github.com/ahmetb/kubectx) - kubectl context manager
 - [awscli](https://docs.aws.amazon.com/cli/latest/reference/) - AWS cli

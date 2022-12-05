@@ -7,10 +7,10 @@ export REPOS="$HOME/Documents/repos"
 export ANDROID_HOME=~/Library/Android/sdk
 
 # PATH
-export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$(yarn global bin):$PATH" 
-export PATH=$PATH:$HOME/.dotnet/tools
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # This loads nvm node version manager.
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
