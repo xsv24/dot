@@ -14,7 +14,7 @@ export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
 # PATH
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="$(yarn global bin):$PATH" 
+export PATH="$(yarn global bin):$PATH"
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 # This loads nvm node version manager.

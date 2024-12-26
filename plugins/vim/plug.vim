@@ -1,5 +1,5 @@
- call plug#begin('~/.vim/plugged')
-    Plug 'leafgarland/typescript-vim'  
+call plug#begin('~/.vim/plugged')
+    Plug 'leafgarland/typescript-vim'
     Plug 'jremmen/vim-ripgrep'
     Plug 'sheerun/vim-polyglot'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -16,4 +16,6 @@
     Plug 'ryanoasis/vim-devicons'
     Plug 'OmniSharp/omnisharp-vim'
     Plug 'preservim/nerdtree'
+    Plug 'knsh14/vim-github-link'
+    Plug 'vim-test/vim-test'
 call plug#end()

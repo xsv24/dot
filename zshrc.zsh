@@ -12,7 +12,7 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlightin
 source "$HOME/fzf-tab-completion/zsh/fzf-zsh-completion.sh"
 
 # Increase file limit open
-ulimit -S -n 30000 
+ulimit -S -n 30000
 
 # Set the zsh into vim mode.
 # bindkey -v

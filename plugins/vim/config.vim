@@ -17,6 +17,9 @@ colorscheme challenger_deep
 "set guifont='FiraCode Nerd Font'
 set encoding=UTF-8
 
+" spell languages
+autocmd FileType gitcommit setlocal spell
+
 "File explorer
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -29,6 +32,8 @@ let g:vrfr_rg = 'true'
 "Coc config
 "let g:coc_global_extensions=[ 'coc-omnisharp' ]
 
+"Spell check
+set spelllang=en
 
 set splitbelow
 set splitright
@@ -49,7 +54,7 @@ set expandtab
 set noshiftround
 set scrolloff=5
 set backspace=indent,eol,start
-set laststatus=2 
+set laststatus=2
 set showmode
 set showcmd
 set hlsearch

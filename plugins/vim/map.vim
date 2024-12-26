@@ -1,7 +1,7 @@
 let mapleader=" "
 
-" relaod config 
-noremap <leader>r :source $MYVIMRC<CR>
+" relaod config
+noremap <leader>c :source $MYVIMRC<CR>
 noremap <leader>u :UndotreeShow<CR>
 noremap <leader>y <CR>
 
@@ -14,13 +14,13 @@ noremap <leader>f :Prettier<CR>
 " Look up word under cursor
 noremap <leader>l :Rg<CR>
 
-" Project Search 
-noremap <leader>s :Rg 
+" Project Search
+noremap <leader>s :Rg
 
 " Show split panes and select to switch
 noremap <leader>w :Windows<CR>
 
-" Open tree view 
+" Open tree view
 noremap <leader>e :Explore<CR>
 
 " Exit terminal insert mode
@@ -29,22 +29,22 @@ tnoremap <Esc> <C-\><C-n>
 " Show histroy of commits
 nnoremap <silent> <leader>g :Commits<CR>
 
-" Show Open windows / buffers 
+" Show Open windows / buffers
 nnoremap <silent> <leader>b :Buffers<CR>
 
-" Show histroy of changes 
+" Show histroy of changes
 nnoremap <silent> <leader>h :History<CR>
 
-" Show Tree view 
-nnoremap <silent> <leader>e :Explore<CR> 
+" Show Tree view
+nnoremap <silent> <leader>e :Explore<CR>
 
-" Move between open panes ctrl + j, k, l, h 
+" Move between open panes ctrl + j, k, l, h
 nnoremap <UP> <C-W><C-J>
 nnoremap <DOWN> <C-W><C-K>
 nnoremap <RIGHT> <C-W><C-L>
 nnoremap <LEFT> <C-W><C-H>
 
-" Inc & Dec Height pane size 
+" Inc & Dec Height pane size
 nnoremap - :vertical resize -5<CR>
 nnoremap + :vertical resize +5<CR>
 nnoremap <leader>pu :resize +5<CR>
@@ -68,11 +68,16 @@ nnoremap <leader>q :q!<CR>
 
 " Goto Definition Mappings
 nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gu <Plug>(coc-references)
 nmap <leader>gt <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gt <Plug>(coc-type-definition)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>gp <Plug>(coc-diagnostic-prev)
 nmap <leader>gn <Plug>(coc-diagnostic-next)
+
+nmap <leader>r <Plug>(coc-rename)
+
 " Navigate back
 noremap <leader>gb <C-o>
 
@@ -84,8 +89,35 @@ autocmd FileType cs nmap <leader>gx <Plug>(omnisharp_documentation)
 autocmd FileType cs nmap <leader>gh <Plug>(omnisharp_signature_help)
 autocmd FileType cs nmap <leader>r <Plug>(omnisharp_rename)
 
+" Autocomplete menu mapping
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 "Nerd Tree
 nnoremap <leader>t :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+
