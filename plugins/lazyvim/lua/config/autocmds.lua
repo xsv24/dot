@@ -2,7 +2,6 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("wrap_spell"),
   pattern = { "text", "plaintex", "typst", "gitcommit", "markdown" },
   callback = function()
     -- We disable the line wrap_spell that LazyVim sets
