@@ -1,0 +1,12 @@
+git:
+  allBranchesLogCmd: git log --oneline --abbrev-commit --all --graph --color=always --decorate --date=relative  --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+  log:
+    showWholeGraph: true
+
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+
+os:
+  editPreset: nvim
