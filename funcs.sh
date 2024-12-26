@@ -66,3 +66,10 @@ function git_add {
   echo "$files" | xargs -I{} git add {} && git status --short && return
 }
 
+function base64_decode {
+  echo "$1" | base64 -d
+}
+
+function base64_encode {
+  echo "$1" | base64
+}

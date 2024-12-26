@@ -4,7 +4,12 @@
 export OPENSC_LIBS=$(brew --prefix opensc)/lib
 export ZSH="$HOME/.oh-my-zsh"
 export REPOS="$HOME/Documents/repos"
+
+# Android PATH
 export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
 
 # PATH
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
