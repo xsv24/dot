@@ -18,4 +18,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'knsh14/vim-github-link'
     Plug 'vim-test/vim-test'
+    Plug 'stevearc/dressing.nvim'
+    Plug 'ziontee113/icon-picker.nvim'
 call plug#end()

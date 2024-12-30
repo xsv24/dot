@@ -1,5 +1,4 @@
 syntax on
-syntax enable
 filetype plugin indent on
 
 "if has('nvim') || has('termguicolors')
