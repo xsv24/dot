@@ -3,6 +3,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": " 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
+    "zenMode.hideLineNumbers": false,
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
@@ -24,6 +25,22 @@
             "before": [ "leader", "t" ],
             "commands": [ "git-graph.view" ],
             "silent": true
+        },
+        {
+            "before": [ "down" ],
+            "commands": [ "workbench.action.navigateDown" ]
+        },
+        {
+            "before": [ "up" ],
+            "commands": [ "workbench.action.navigateUp" ]
+        },
+        {
+            "before": [ "left" ],
+            "commands": [ "workbench.action.navigateLeft" ]
+        },
+        {
+            "before": [ "right" ],
+            "commands": [ "workbench.action.navigateRight" ]
         },
         {
             "before": [ "leader", "g", "d" ],
