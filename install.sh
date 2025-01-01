@@ -93,5 +93,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # LazyVim
 mkdir "$HOME/.config/nvim" && ln -s "$HOME/.dot/plugins/lazyvim" "$HOME/.config/nvim"
 
+# tmux
+brew install tmux
+## tmux plugins manager
+## Install the plugins "prefix + I"
+git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+## tmux config
+ln -s "$HOME/.dot/plugins/tmux/.tmux.conf" "$HOME/.tmux.conf"
+
 # Inject a source to the .dot .zshrc file
 echo "source $HOME/.dot/zshrc.zsh" >>"$HOME/.zshrc"
