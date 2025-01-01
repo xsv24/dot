@@ -7,12 +7,16 @@ export FZF_DEFAULT_COMMAND="rg --no-ignore-vcs --files --hidden --smart-case --f
 
 export FZF_DEFAULT_OPTS="
 --layout=reverse
---info=inline
 --height=80%
+--prompt='🔎 '
+--pointer='▶'
+--marker='✓'
 --multi
---preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--tmux bottom
+--info right
+--padding 1
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
---prompt='👉 ' --pointer='▶' --marker='✓'
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-a:select-all'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
