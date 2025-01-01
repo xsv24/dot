@@ -91,7 +91,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # mkdir "$HOME/.config/nvim" && echo "source $HOME/.dot/plugins/vim/init.vim" >>"$HOME/.config/nvim/init.vim"
 
 # LazyVim
-mkdir "$HOME/.config/nvim" && ln -s "$HOME/.dot/plugins/lazyvim/" "$HOME/config/nvim"
+mkdir "$HOME/.config/nvim" && ln -s "$HOME/.dot/plugins/lazyvim" "$HOME/.config/nvim"
 
 # Inject a source to the .dot .zshrc file
 echo "source $HOME/.dot/zshrc.zsh" >>"$HOME/.zshrc"
