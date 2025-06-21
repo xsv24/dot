@@ -9,3 +9,5 @@ vim.g.root_spec = { "cwd" }
 
 vim.opt.spelllang = "en_nz"
 vim.opt.spell = true
+
+vim.g.lazyvim_picker = "snacks"
