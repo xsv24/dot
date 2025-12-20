@@ -10,7 +10,7 @@ vim.keymap.set({ "n", "x" }, "<leader>gb", Snacks.picker.git_branches, { desc = 
 vim.keymap.set({ "n", "x" }, "<leader>go", function()
   Snacks.gitbrowse()
 end, { desc = "Perm Link" })
-vim.keymap.set({ "n", "x" }, "<leader>gp", function()
+vim.keymap.set({ "n", "x" }, "<leader>gx", function()
   ---@diagnostic disable-next-line: missing-fields
   Snacks.gitbrowse({
     open = function(url)
@@ -19,6 +19,20 @@ vim.keymap.set({ "n", "x" }, "<leader>gp", function()
   })
 end, { desc = "Perm Link (copy)" })
 vim.keymap.set("n", "<leader>gn", require("neogit").open, { desc = "Neogit" })
+
+-- Git Hub
+vim.keymap.set("n", "<leader>gi", function()
+  Snacks.picker.gh_issue()
+end, { desc = "GitHub Issues (open)" })
+vim.keymap.set("n", "<leader>gI", function()
+  Snacks.picker.gh_issue({ state = "all" })
+end, { desc = "GitHub Issues (all)" })
+vim.keymap.set("n", "<leader>gp", function()
+  Snacks.picker.gh_pr()
+end, { desc = "GitHub Pull Requests (open)" })
+vim.keymap.set("n", "<leader>gP", function()
+  Snacks.picker.gh_pr({ state = "all" })
+end, { desc = "GitHub Pull Requests (all)" })
 
 -- Debugging
 vim.keymap.set("n", "<leader>dO", require("dap").step_out, { desc = "Step Out" })
