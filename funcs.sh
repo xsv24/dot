@@ -102,6 +102,15 @@ function git_checkout {
   git checkout "$(git_branch)"
 }
 
+# re-bases current branch on the latest origin branch provide.
+function git_rebase {
+  local branch
+  branch="${1:-master}"
+
+  git fetch origin "$branch:$branch"
+  git rebase "$branch"
+}
+
 function base64_decode {
   echo "$1" | base64 -d
 }
@@ -133,4 +142,19 @@ git_rebase_merge() {
   else
     echo "> No worries, see you next time! (๑•̀ㅂ•́)ง✧"
   fi
+}
+
+# Run a command from the root of the project without having to cd around
+# Handy for mono-repositories
+git_cmd() {
+  git_root=$(git rev-parse --show-toplevel)
+  current_dir=$(pwd)
+
+  cd "$git_root" || exit
+
+  # Run parsed command
+  "$@"
+
+  # Pop back
+  cd "$current_dir" || exit
 }
