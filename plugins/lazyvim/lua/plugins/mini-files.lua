@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     lazy = false,
     opts = {
       -- You can configure options here if needed
