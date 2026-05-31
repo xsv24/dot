@@ -11,8 +11,7 @@ source "$HOME/fzf-tab-completion/zsh/fzf-zsh-completion.sh"
 # Increase file limit open
 ulimit -S -n 30000
 
-# Set the zsh into vim mode.
-# bindkey -v
+source "$HOME/.dot/term-vi-mode.zsh"
 
 # Plugins
 source "$HOME/.dot/plugins/kubectl.sh"
