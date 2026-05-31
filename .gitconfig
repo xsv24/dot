@@ -1,0 +1,38 @@
+[core]
+	editor = nvim
+  pager = delta
+	excludesfile = /Users/thomas.pearson/.gitignore_global
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = false
+    line-numbers = false
+
+[merge]
+    conflictstyle = diff3
+
+# https://jordanelver.co.uk/blog/2020/06/04/fixing-commits-with-git-commit-fixup-and-git-rebase-autosquash/#:~:text=Fixup%20commits&text=Practically%2C%20%2D%2Dfixup%20associates%20a,use%20with%20rebase%20%2D%2Dautosquash.
+[rebase]
+  autosquash = true
+
+[diff]
+  colorMoved = default
+	ignoreAllSpace = false
+
+[alias]
+  create = "!inkan checkout"
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+  branch = "!git for-each-ref refs/heads/ --format='%(refname:short)' | fzf"
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[checkout]
+	defaultRemote = origin
