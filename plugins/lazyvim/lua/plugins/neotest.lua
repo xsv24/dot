@@ -3,11 +3,63 @@ return {
   dependencies = { "haydenmeade/neotest-jest" },
   keys = {
     {
+      "<leader>tc",
+      function()
+        local choices = {
+          { name = "Nearest test", value = "nearest" },
+          { name = "Current file", value = vim.fn.expand("%") },
+          { name = "Full suite", value = "suite" },
+        }
+
+        local format_item = function(item)
+          return item.name
+        end
+
+        local on_select = function(choice)
+          if not choice then
+            return
+          end
+
+          local args = {}
+          if choice.value == "suite" then
+            args.suite = true
+          else
+            args.position = choice.value
+          end
+
+          require("neotest").run.run(args)
+        end
+
+        vim.ui.select(choices, { prompt = "Run test:", format_item }, on_select)
+      end,
+    },
+    {
       "<leader>tl",
       function()
         require("neotest").run.run_last()
       end,
       desc = "Run Last Test",
+    },
+    {
+      "<leader>tpc",
+      function()
+        require("neotest").run.run({
+          suite = false,
+          extra_args = { "--silent=false" },
+        })
+      end,
+      desc = "Run Test with --silent=false",
+    },
+    {
+      "<leader>tpa",
+      function()
+        require("neotest").run.run({
+          suite = false,
+          env = { LOG_SILENT = "false" },
+          extra_args = { "--silent=false" },
+        })
+      end,
+      desc = "Run Test with all logs",
     },
   },
   opts = function(_, opts)

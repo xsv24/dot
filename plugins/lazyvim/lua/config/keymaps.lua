@@ -59,3 +59,21 @@ vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buff
 
 -- Utils
 vim.keymap.set({ "n", "x" }, "zs", Snacks.picker.spelling, { desc = "Spelling suguestions" })
+
+vim.keymap.set("n", "<leader>fyp", function()
+  local filepath = vim.fn.expand("%:.") -- Relative to cwd
+  vim.fn.setreg("+", filepath)
+  vim.notify("Copied: " .. filepath, vim.log.levels.INFO)
+end, { desc = "Copy file path" })
+
+vim.keymap.set("n", "<leader>fyP", function()
+  local filepath = vim.fn.expand("%:p")
+  vim.fn.setreg("+", filepath)
+  vim.notify("Copied: " .. filepath, vim.log.levels.INFO)
+end, { desc = "Copy full file path" })
+
+vim.keymap.set("n", "<leader>fyn", function()
+  local filename = vim.fn.expand("%:t")
+  vim.fn.setreg("+", filename)
+  vim.notify("Copied: " .. filename, vim.log.levels.INFO)
+end, { desc = "Copy filename" })
