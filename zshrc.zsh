@@ -1,6 +1,3 @@
-# Starship https://starship.rs
-eval "$(starship init zsh)"
-
 # Libs
 source "$HOME/.dot/vars.zsh"
 source "$HOME/.dot/funcs.sh"
@@ -19,5 +16,7 @@ ulimit -S -n 30000
 
 # Plugins
 source "$HOME/.dot/plugins/kubectl.sh"
+# Starship https://starship.rs
+eval "$(starship init zsh)"
 # fzf terminal bindings must remain at the end of the file.
 source "$HOME/.dot/plugins/fzf.zsh"

@@ -35,6 +35,7 @@ brew install zsh-syntax-highlighting
 
 # Starship theme
 brew install starship
+ln -s "$HOME/.dot/starship.toml" "$HOME/.config/starship.toml"
 
 # json cli helper
 brew install jq
