@@ -3,7 +3,7 @@
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 -- LSP
-vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<cr>", { desc = "Restart LSP Server" })
+vim.keymap.set("n", "<leader>lr", "<cmd>lsp restart<cr>", { desc = "Restart LSP Server" })
 
 -- Git
 vim.keymap.set({ "n", "x" }, "<leader>gb", Snacks.picker.git_branches, { desc = "Git branches" })
