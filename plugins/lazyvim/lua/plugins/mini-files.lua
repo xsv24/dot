@@ -19,12 +19,18 @@ return {
         require("mini.files").open(vim.uv.cwd(), true)
       end, { desc = "Open mini.files (Directory of Current File)" })
 
-      -- Auto Load mini-files on start up
+      -- Auto Load mini-files on start up.
+      -- Deferred with `vim.schedule` so it opens AFTER `UIEnter` (when snacks
+      -- attaches its `vim.ui.select`). Otherwise mini.files snapshots the native
+      -- `vim.ui.select` on open and restores it on close, clobbering the snacks
+      -- picker for the rest of the session.
       vim.api.nvim_create_autocmd("VimEnter", {
         callback = function()
           local arg = vim.fn.argv(0)
           if arg and vim.fn.isdirectory(arg) == 1 then
-            require("mini.files").open(arg, true)
+            vim.schedule(function()
+              require("mini.files").open(arg, true)
+            end)
           end
         end,
       })
