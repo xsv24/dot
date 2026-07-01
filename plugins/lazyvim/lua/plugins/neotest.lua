@@ -30,7 +30,7 @@ return {
           require("neotest").run.run(args)
         end
 
-        vim.ui.select(choices, { prompt = "Run test:", format_item }, on_select)
+        vim.ui.select(choices, { prompt = "Run test:", format_item = format_item }, on_select)
       end,
     },
     {
@@ -68,6 +68,17 @@ return {
       require("neotest-jest")({
         jestCommand = "yarn test --",
         env = { CI = true },
+        -- neotest-jest captures cwd at load time (nvim startup), so hasJestDependency
+        -- falls back to checking the monorepo root package.json which lacks a "jest"
+        -- key (only babel-jest), causing all test files to be unrecognised.
+        -- Override with a simple pattern match instead.
+        isTestFile = function(file_path)
+          if not file_path then
+            return false
+          end
+          return string.match(file_path, "%.spec%.[tj]sx?$") ~= nil
+            or string.match(file_path, "%.test%.[tj]sx?$") ~= nil
+        end,
         cwd = function(file)
           -- Get the Current working directory for mono repos
           if string.find(file, "/libraries/") or string.find(file, "/packages/") or string.find(file, "/services/") then
