@@ -8,22 +8,25 @@ export REPOS="$HOME/Documents/repos"
 # Android PATH
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/30.0.14904198
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
 export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # PATH
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 # This loads nvm node version manager.
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # dotnet openssl issues.
-export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 export DYLD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib"
 
 autoload -Uz compinit
