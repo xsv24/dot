@@ -45,7 +45,7 @@ vim.keymap.set("n", "<DOWN>", "<C-w>j", { desc = "Go to Lower Window", remap = t
 vim.keymap.set("n", "<UP>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 vim.keymap.set("n", "<RIGHT>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Escapse terminal mode", remap = false })
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Escapse terminal mode", remap = false })
 
 -- Code navigations
 vim.keymap.set("n", "gb", "<C-o>", { desc = "Goto prev position" })
